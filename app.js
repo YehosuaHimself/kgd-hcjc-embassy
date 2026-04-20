@@ -48,9 +48,13 @@
 
   function currentRouteKey() {
     var p = location.pathname || '/';
-    p = p.replace(/^\/+/, '').replace(/\/+$/, '');
-    if (!p || p === 'index.html' || p === '404.html') return 'home';
-    return p;
+    // Take only the last meaningful segment so the router works under
+    // file:// previews, nested base paths, and trailing slashes alike.
+    var parts = p.split('/').filter(function (s) { return !!s; });
+    var last = parts.length ? parts[parts.length - 1] : '';
+    if (last.toLowerCase().slice(-5) === '.html') last = last.slice(0, -5);
+    if (!last || last === 'index' || last === 'home') return 'home';
+    return last;
   }
 
   function route() {
