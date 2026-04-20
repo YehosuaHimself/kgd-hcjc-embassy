@@ -11,7 +11,7 @@
 
   // ============ ROUTING ============
   const ROUTES = {
-    'home':{title:'KGD-HCJC · Embassy',crumb:[{l:'Home',h:'#home'}],ref:'— V 1.0.0 · 2026-04-19',parent:null},
+    'home':{title:'KGD-HCJC · Embassy',crumb:[{l:'Home',h:'#home'}],ref:'— V 3.0.7 · 2026-04-19',parent:null},
     'about':{title:'About · KGD-HCJC',crumb:[{l:'Home',h:'#home'},{l:'About',cur:true}],ref:'— SIX DEFINING PAGES',parent:'about'},
     'about-mandate':{title:'Mandate · About',crumb:[{l:'Home',h:'#home'},{l:'About',h:'#about'},{l:'Mandate',cur:true}],ref:'— 01 of 06',parent:'about'},
     'about-doctrine':{title:'Doctrine · About',crumb:[{l:'Home',h:'#home'},{l:'About',h:'#about'},{l:'Doctrine',cur:true}],ref:'— 02 of 06',parent:'about'},
@@ -20,14 +20,16 @@
     'about-standing':{title:'Standing & Accreditation',crumb:[{l:'Home',h:'#home'},{l:'About',h:'#about'},{l:'Standing',cur:true}],ref:'— DEFINING DOCUMENT',parent:'about'},
     'about-vocations':{title:'Vocations & Membership',crumb:[{l:'Home',h:'#home'},{l:'About',h:'#about'},{l:'Vocations',cur:true}],ref:'— 06 of 06',parent:'about'},
     'services':{title:'Services · KGD-HCJC',crumb:[{l:'Home',h:'#home'},{l:'Services',cur:true}],ref:'— FIVE SERVICE LINES',parent:'services'},
-    'services-pilgrim':{title:'Pilgrim Tours · Services',crumb:[{l:'Home',h:'#home'},{l:'Services',h:'#services'},{l:'Pilgrim Tours',cur:true}],ref:'— SERVICE I · Issues testimonium',parent:'services'},
-    'services-exchange':{title:'Exchange · Services',crumb:[{l:'Home',h:'#home'},{l:'Services',h:'#services'},{l:'Exchange',cur:true}],ref:'— SERVICE II',parent:'services'},
-    'services-education':{title:'Educational Services',crumb:[{l:'Home',h:'#home'},{l:'Services',h:'#services'},{l:'Educational',cur:true}],ref:'— SERVICE III',parent:'services'},
-    'services-travel':{title:'Travel · Services',crumb:[{l:'Home',h:'#home'},{l:'Services',h:'#services'},{l:'Travel',cur:true}],ref:'— SERVICE IV',parent:'services'},
-    'services-consultation':{title:'Consultation · Services',crumb:[{l:'Home',h:'#home'},{l:'Services',h:'#services'},{l:'Consultation',cur:true}],ref:'— SERVICE V · Confidential by default',parent:'services'},
+    'services-pilgrim':{title:'Pilgrim & Religious Tours · Services',crumb:[{l:'Home',h:'#home'},{l:'Services',h:'#services'},{l:'Pilgrim & Religious Tours',cur:true}],ref:'— SERVICE IV · Issues testimonium',parent:'services'},
+    'services-exchange':{title:'Global Exchange & Working Abroad · Services',crumb:[{l:'Home',h:'#home'},{l:'Services',h:'#services'},{l:'Global Exchange',cur:true}],ref:'— SERVICE III',parent:'services'},
+    'services-education':{title:'Education · Services',crumb:[{l:'Home',h:'#home'},{l:'Services',h:'#services'},{l:'Education',cur:true}],ref:'— SERVICE I',parent:'services'},
+    'services-community':{title:'Community Development · Services',crumb:[{l:'Home',h:'#home'},{l:'Services',h:'#services'},{l:'Community Development',cur:true}],ref:'— SERVICE II',parent:'services'},
+    'services-consultation':{title:'Political & Religious Consultation · Services',crumb:[{l:'Home',h:'#home'},{l:'Services',h:'#services'},{l:'Consultation',cur:true}],ref:'— SERVICE V · Confidential by default',parent:'services'},
+    'visa':{title:'Visa, Accreditation & Travel Documents',crumb:[{l:'Home',h:'#home'},{l:'Visa & Travel Documents',cur:true}],ref:'— DIPLOMATIC PROTOCOL',parent:null},
+    'leadership':{title:'Leadership · KGD-HCJC',crumb:[{l:'Home',h:'#home'},{l:'About',h:'#about'},{l:'Leadership',cur:true}],ref:'— OFFICERS WHO SIGN, SEAL, AND SERVE',parent:'about'},
     'seats':{title:'Seats & Missions · KGD-HCJC',crumb:[{l:'Home',h:'#home'},{l:'Seats',cur:true}],ref:'— DIRECTORY',parent:'seats'},
     'seat-vienna':{title:'The Mission at Vienna',crumb:[{l:'Home',h:'#home'},{l:'Seats',h:'#seats'},{l:'Vienna',cur:true}],ref:'— MISSION OF RECORD',parent:'seats'},
-    'seat-new-york':{title:'The Mission at New York',crumb:[{l:'Home',h:'#home'},{l:'Seats',h:'#seats'},{l:'New York',cur:true}],ref:'— SEAT AT THE NATIONS',parent:'seats'},
+    'seat-new-york':{title:'The Mission at New York',crumb:[{l:'Home',h:'#home'},{l:'Seats',h:'#seats'},{l:'New York',cur:true}],ref:'— TRANSATLANTIC SEAT',parent:'seats'},
     'press':{title:'Press & Communiqués',crumb:[{l:'Home',h:'#home'},{l:'Press',cur:true}],ref:'— ARCHIVE',parent:'press'},
     'press-communique':{title:'On the Accreditation of a Mission at Brussels',crumb:[{l:'Home',h:'#home'},{l:'Press',h:'#press'},{l:'2026-04-19',cur:true}],ref:'— PERMANENT URL',parent:'press'},
     'press-accreditation':{title:'Press Accreditation',crumb:[{l:'Home',h:'#home'},{l:'Press',h:'#press'},{l:'Accreditation',cur:true}],ref:'— FOR JOURNALISTS',parent:'press'},
@@ -216,5 +218,37 @@
     window.addEventListener('scroll', function () {
       btn.classList.toggle('show', window.scrollY > 400);
     }, { passive: true });
+  })();
+
+  // ============ SECURITY · SESSION COUNTER ============
+  (function () {
+    function randHex(n){var h='0123456789ABCDEF',o='';for(var i=0;i<n;i++)o+=h[Math.floor(Math.random()*16)];return o;}
+    var sid = 'K' + randHex(3) + '-' + randHex(4);
+    var el = document.getElementById('sessionId');
+    if (el) el.textContent = sid;
+    var ts = document.getElementById('sessionTs');
+    function tick(){
+      if (!ts) return;
+      var d = new Date();
+      var h = String(d.getUTCHours()).padStart(2,'0');
+      var m = String(d.getUTCMinutes()).padStart(2,'0');
+      var s = String(d.getUTCSeconds()).padStart(2,'0');
+      ts.textContent = d.toISOString().slice(0,10) + ' · ' + h + ':' + m + ':' + s + ' UTC';
+    }
+    tick(); setInterval(tick, 1000);
+  })();
+
+  // ============ CLIENT HARDENING ============
+  (function () {
+    // disable right-click context menu except on form elements (light deterrent)
+    document.addEventListener('contextmenu', function(e){
+      var t = e.target;
+      if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+      // allow — but we don't need to disable; keeping for future
+    });
+    // prevent drag of images (minor)
+    document.addEventListener('dragstart', function(e){
+      if (e.target && e.target.tagName === 'IMG') e.preventDefault();
+    });
   })();
 })();
