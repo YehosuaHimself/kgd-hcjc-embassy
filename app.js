@@ -11,7 +11,7 @@
 
   // ============ ROUTING ============
   const ROUTES = {
-    'home':{title:'KGD-HCJC · Embassy',crumb:[{l:'Home',h:'#home'}],ref:'— V 3.0.9 · 2026-04-19',parent:null},
+    'home':{title:'KGD-HCJC · Embassy',crumb:[{l:'Home',h:'#home'}],ref:'— V 3.1.0 · 2026-04-19',parent:null},
     'about':{title:'About · KGD-HCJC',crumb:[{l:'Home',h:'#home'},{l:'About',cur:true}],ref:'— SIX DEFINING PAGES',parent:'about'},
     'about-mandate':{title:'Mandate · About',crumb:[{l:'Home',h:'#home'},{l:'About',h:'#about'},{l:'Mandate',cur:true}],ref:'— 01 of 06',parent:'about'},
     'about-doctrine':{title:'Doctrine · About',crumb:[{l:'Home',h:'#home'},{l:'About',h:'#about'},{l:'Doctrine',cur:true}],ref:'— 02 of 06',parent:'about'},
