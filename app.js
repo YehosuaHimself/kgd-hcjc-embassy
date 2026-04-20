@@ -11,7 +11,7 @@
 
   // ============ ROUTING ============
   const ROUTES = {
-    'home':{title:'KGD-HCJC · Embassy',crumb:[{l:'Home',h:'#home'}],ref:'— V 3.1.0 · 2026-04-19',parent:null},
+    'home':{title:'KGD-HCJC · Embassy',crumb:[{l:'Home',h:'#home'}],ref:'— THE EMBASSY · VIENNA &amp; NEW YORK',parent:null},
     'about':{title:'About · KGD-HCJC',crumb:[{l:'Home',h:'#home'},{l:'About',cur:true}],ref:'— SIX DEFINING PAGES',parent:'about'},
     'about-mandate':{title:'Mandate · About',crumb:[{l:'Home',h:'#home'},{l:'About',h:'#about'},{l:'Mandate',cur:true}],ref:'— 01 of 06',parent:'about'},
     'about-doctrine':{title:'Doctrine · About',crumb:[{l:'Home',h:'#home'},{l:'About',h:'#about'},{l:'Doctrine',cur:true}],ref:'— 02 of 06',parent:'about'},
@@ -29,7 +29,7 @@
     'leadership':{title:'Leadership · KGD-HCJC',crumb:[{l:'Home',h:'#home'},{l:'About',h:'#about'},{l:'Leadership',cur:true}],ref:'— OFFICERS WHO SIGN, SEAL, AND SERVE',parent:'about'},
     'seats':{title:'Seats & Missions · KGD-HCJC',crumb:[{l:'Home',h:'#home'},{l:'Seats',cur:true}],ref:'— DIRECTORY',parent:'seats'},
     'seat-vienna':{title:'The Mission at Vienna',crumb:[{l:'Home',h:'#home'},{l:'Seats',h:'#seats'},{l:'Vienna',cur:true}],ref:'— MISSION OF RECORD',parent:'seats'},
-    'seat-new-york':{title:'The Mission at New York',crumb:[{l:'Home',h:'#home'},{l:'Seats',h:'#seats'},{l:'New York',cur:true}],ref:'— TRANSATLANTIC SEAT',parent:'seats'},
+    'seat-new-york':{title:'The Mission at New York',crumb:[{l:'Home',h:'#home'},{l:'Seats',h:'#seats'},{l:'New York',cur:true}],ref:'— MISSION AT MANHATTAN',parent:'seats'},
     'press':{title:'Press & Communiqués',crumb:[{l:'Home',h:'#home'},{l:'Press',cur:true}],ref:'— ARCHIVE',parent:'press'},
     'press-communique':{title:'On the Accreditation of a Mission at Brussels',crumb:[{l:'Home',h:'#home'},{l:'Press',h:'#press'},{l:'2026-04-19',cur:true}],ref:'— PERMANENT URL',parent:'press'},
     'press-accreditation':{title:'Press Accreditation',crumb:[{l:'Home',h:'#home'},{l:'Press',h:'#press'},{l:'Accreditation',cur:true}],ref:'— FOR JOURNALISTS',parent:'press'},
@@ -41,7 +41,7 @@
     'legal-accessibility':{title:'Accessibility · Legal',crumb:[{l:'Home',h:'#home'},{l:'Legal'},{l:'Accessibility',cur:true}],ref:'— WCAG 2.2 AA',parent:null},
     'legal-privacy':{title:'Privacy · Legal',crumb:[{l:'Home',h:'#home'},{l:'Legal'},{l:'Privacy',cur:true}],ref:'— GDPR-COMPLIANT',parent:null},
     'legal-imprint':{title:'Imprint · Legal',crumb:[{l:'Home',h:'#home'},{l:'Legal'},{l:'Imprint',cur:true}],ref:'— MEDIA LAW §24 §25',parent:null},
-    'chancery':{title:'Chancery · Restricted',crumb:[{l:'Home',h:'#home'},{l:'Chancery',cur:true}],ref:'— RESTRICTED',parent:null},
+    'chancery':{title:'Chancery · Restricted',crumb:[{l:'Home',h:'#home'},{l:'Chancery',cur:true}],ref:'— RESTRICTED · SESSION LOGGED',parent:null},
     'design':{title:'Design System',crumb:[{l:'Home',h:'#home'},{l:'Design System',cur:true}],ref:'— V 1.0.0',parent:null},
     '404':{title:'Document not found',crumb:[{l:'Home',h:'#home'},{l:'404',cur:true}],ref:'— NOT FOUND',parent:null}
   };
