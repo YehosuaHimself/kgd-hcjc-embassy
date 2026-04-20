@@ -27,7 +27,7 @@
 :root{--bg:#FAF6EC;--bg-2:#F3E7CC;--bg-3:#EFE3C7;--paper:#FFFCF0;--elev:#FFFFFF;--ink:#1A120A;--ink-soft:#6B5A3E;--ink-muted:#9A8B73;--amber:#C8762A;--amber-hi:#E09A52;--amber-soft:rgba(200,118,42,0.06);--amber-hair:rgba(200,118,42,0.22);--gold:#C9A84C;--gold-hi:#E3CC8A;--gold-deep:#A8873A;--success:#5A7A2B;--error:#B03A3A;--hair:rgba(26,18,10,0.08);--hair-strong:rgba(26,18,10,0.14);--font-d:'Helvetica Neue',Helvetica,Arial,sans-serif;--font-m:'Courier New',Courier,monospace;--ease:cubic-bezier(0.2,0.7,0.2,1);--shadow-1:0 1px 2px rgba(26,18,10,0.04);--shadow-2:0 1px 2px rgba(26,18,10,0.04),0 10px 28px -10px rgba(26,18,10,0.14);--shadow-3:0 1px 2px rgba(26,18,10,0.04),0 22px 60px -20px rgba(26,18,10,0.22)}
 /* === BASE === */
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-body{font-family:var(--font-d);font-size:17px;line-height:1.65;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{font-family:var(--font-d);font-size:18px;line-height:1.65;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 a{color:var(--ink);text-decoration:none;transition:color 140ms var(--ease)}a:hover{color:var(--amber)}
 :focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:2px}
 button{font-family:inherit;cursor:pointer}img{display:block;max-width:100%}
@@ -86,10 +86,10 @@ nav.primary a:hover,nav.primary a.on{color:var(--amber);border-bottom-color:var(
 /* === DOC HERO (document-style hero) === */
 .doc-hero{padding:72px 24px 48px;background:var(--bg)}
 .doc-hero__inner{max-width:980px;margin:0 auto}
-.doc-hero__eye{font-family:var(--font-m);font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:var(--amber);margin-bottom:18px}
+.doc-hero__eye{font-family:var(--font-m);font-size:11.5px;letter-spacing:0.28em;text-transform:uppercase;color:var(--amber);margin-bottom:18px}
 .doc-hero__title{font-weight:900;text-transform:uppercase;letter-spacing:-0.025em;line-height:0.92;font-size:clamp(44px,6.4vw,76px);color:var(--ink);margin-bottom:22px}
 .doc-hero__title small{display:block;font-size:0.36em;letter-spacing:0.1em;color:var(--ink-soft);font-weight:400;margin-bottom:10px}
-.doc-hero__lead{font-size:19px;color:var(--ink-soft);max-width:760px;line-height:1.6;margin-bottom:24px}
+.doc-hero__lead{font-size:20px;color:var(--ink-soft);max-width:760px;line-height:1.6;margin-bottom:24px}
 .doc-hero__meta{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:18px 0;border-top:0.5px solid var(--amber-hair);border-bottom:0.5px solid var(--amber-hair)}
 .doc-hero__meta .lbl{font-family:var(--font-m);font-size:9.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:4px}
 .doc-hero__meta .val{font-family:var(--font-m);font-size:12px;letter-spacing:0.12em;color:var(--ink)}
@@ -104,8 +104,8 @@ nav.primary a:hover,nav.primary a.on{color:var(--amber);border-bottom-color:var(
 .doc-content h2{font-weight:900;text-transform:uppercase;letter-spacing:-0.015em;font-size:26px;line-height:1.1;margin:48px 0 16px;padding-top:32px;border-top:0.5px solid var(--hair)}
 .doc-content h2:first-child{margin-top:0;padding-top:0;border-top:none}
 .doc-content h2 .num{font-family:var(--font-m);font-size:10px;letter-spacing:0.25em;color:var(--amber);text-transform:uppercase;display:block;font-weight:400;margin-bottom:8px}
-.doc-content p{font-size:17px;color:var(--ink);line-height:1.75;max-width:720px;margin-bottom:16px}
-.doc-content p.lead{font-size:19px;color:var(--ink-soft)}
+.doc-content p{font-size:18px;color:var(--ink);line-height:1.75;max-width:720px;margin-bottom:16px}
+.doc-content p.lead{font-size:20px;color:var(--ink-soft)}
 .doc-content ul.plain{list-style:none;margin:12px 0;max-width:680px}
 .doc-content ul.plain li{display:grid;grid-template-columns:28px 1fr;gap:12px;padding:10px 0;border-bottom:0.5px solid var(--hair);align-items:baseline}
 .doc-content ul.plain li::before{content:"—";color:var(--amber);font-family:var(--font-m);font-size:13px;padding-top:2px}
@@ -144,11 +144,11 @@ footer.site{background:var(--bg);padding:72px 24px 44px;border-top:1px solid var
 .b2t:hover{background:var(--amber);opacity:1}
 /* === HOME SECTIONS === */
 .hero{padding:80px 24px 72px;text-align:center;background:radial-gradient(1100px 600px at 50% -10%,#F5EBD2 0%,transparent 60%),var(--bg)}
-.hero__eye{font-family:var(--font-m);font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:var(--amber);margin-bottom:22px}
+.hero__eye{font-family:var(--font-m);font-size:11.5px;letter-spacing:0.28em;text-transform:uppercase;color:var(--amber);margin-bottom:22px}
 .hero__sigil{width:112px;height:112px;color:var(--ink);margin:0 auto 36px}
 .hero__mandate{font-weight:900;text-transform:uppercase;letter-spacing:-0.025em;line-height:0.92;font-size:clamp(40px,6.2vw,70px);max-width:1000px;margin:0 auto 24px;color:var(--ink)}
 .hero__mandate em{font-style:normal;color:var(--amber)}
-.hero__sub{font-size:17px;color:var(--ink-soft);max-width:640px;margin:0 auto 36px;line-height:1.7}
+.hero__sub{font-size:18px;color:var(--ink-soft);max-width:640px;margin:0 auto 36px;line-height:1.7}
 .hero__seats{display:inline-flex;align-items:center;gap:18px;padding:12px 22px;background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.2));border:0.5px solid var(--amber-hair);border-radius:2px;font-family:var(--font-m);font-size:10.5px;letter-spacing:0.24em;text-transform:uppercase;color:var(--ink-soft);position:relative}
 .hero__seats::before,.hero__seats::after{content:"";position:absolute;top:-3px;bottom:-3px;width:5px;border:0.5px solid var(--gold);opacity:0.6}
 .hero__seats::before{left:-3px;border-right:none}
@@ -178,7 +178,7 @@ footer.site{background:var(--bg);padding:72px 24px 44px;border-top:1px solid var
 .door:hover .door__icon{color:var(--amber)}
 .door__icon{width:68px;height:88px;color:var(--ink-soft);transition:color 220ms var(--ease)}
 .door__title{font-weight:900;font-size:19px;letter-spacing:-0.01em;text-transform:uppercase;line-height:1.05}
-.door__desc{font-size:13.5px;color:var(--ink-soft);line-height:1.55;flex:1}
+.door__desc{font-size:14.5px;color:var(--ink-soft);line-height:1.55;flex:1}
 .door__foot{display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:0.5px solid var(--hair);font-family:var(--font-m);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink-muted)}
 .door__act{color:var(--ink);display:inline-flex;align-items:center;gap:6px}
 .door__arr{transition:all 220ms var(--ease)}
@@ -202,7 +202,7 @@ footer.site{background:var(--bg);padding:72px 24px 44px;border-top:1px solid var
 .wax{position:absolute;top:-6px;right:20px;width:48px;height:48px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--amber-hi) 0%,var(--amber) 50%,var(--gold-deep) 100%);border:1.5px solid var(--gold-deep);display:flex;align-items:center;justify-content:center;font-family:var(--font-m);font-size:7px;letter-spacing:0.08em;color:rgba(26,18,10,0.75);text-transform:uppercase;text-align:center;line-height:1.1;font-weight:700;box-shadow:inset 0 -3px 6px rgba(26,18,10,0.2),0 2px 4px rgba(26,18,10,0.15);transform:rotate(-6deg)}
 .wax::before{content:"";position:absolute;inset:4px;border:1px dashed rgba(26,18,10,0.25);border-radius:50%}
 .com__body h2{font-weight:900;text-transform:uppercase;letter-spacing:-0.01em;font-size:24px;line-height:1.1;margin-bottom:8px;color:var(--ink)}
-.com__body p{color:var(--ink-soft);font-size:15px;line-height:1.6;max-width:620px}
+.com__body p{color:var(--ink-soft);font-size:16px;line-height:1.6;max-width:620px}
 .com__link{font-family:var(--font-m);font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:var(--ink);border:0.5px solid var(--ink);padding:12px 18px;border-radius:2px;display:inline-flex;align-items:center;gap:10px;transition:all 180ms var(--ease);white-space:nowrap}
 .com__link:hover{background:var(--ink);color:var(--bg-2)}
 .seats{padding:88px 24px 72px}
@@ -221,7 +221,7 @@ footer.site{background:var(--bg);padding:72px 24px 44px;border-top:1px solid var
 .seat__body{display:flex;flex-direction:column;gap:10px}
 .seat__hon{font-family:var(--font-m);font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:var(--amber)}
 .seat__name{font-weight:900;text-transform:uppercase;font-size:34px;letter-spacing:-0.02em;line-height:0.95}
-.seat__lines{font-family:var(--font-m);font-size:11px;letter-spacing:0.14em;line-height:1.9;color:var(--ink-soft);text-transform:uppercase}
+.seat__lines{font-family:var(--font-m);font-size:11.5px;letter-spacing:0.14em;line-height:1.9;color:var(--ink-soft);text-transform:uppercase}
 .seat__foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:0.5px solid var(--hair);font-family:var(--font-m);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink-muted)}
 .seat__act{color:var(--ink);display:inline-flex;align-items:center;gap:6px}
 .calendar{background:var(--bg);border-top:0.5px solid var(--hair);border-bottom:0.5px solid var(--hair);padding:48px 24px}
@@ -231,7 +231,7 @@ footer.site{background:var(--bg);padding:72px 24px 44px;border-top:1px solid var
 .cal__items{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .cal__item{display:flex;flex-direction:column;gap:5px}
 .cal__date{font-family:var(--font-m);font-size:11px;letter-spacing:0.2em;color:var(--amber);text-transform:uppercase}
-.cal__name{font-weight:700;font-size:15px;line-height:1.3}
+.cal__name{font-weight:700;font-size:16px;line-height:1.3}
 .cal__meta{font-family:var(--font-m);font-size:10px;letter-spacing:0.18em;color:var(--ink-muted);text-transform:uppercase}
 /* === SERVICES LIST === */
 .srv{max-width:1180px;margin:40px auto 72px;padding:0 24px;display:flex;flex-direction:column;gap:16px}
@@ -460,7 +460,7 @@ footer.site .footer__bottom .dot{color:#E09A52}
 .microline{font-family:var(--font-m);font-size:6.5px;letter-spacing:0.42em;color:var(--gold-deep);opacity:0.55;text-transform:uppercase;line-height:1.2;overflow:hidden;text-overflow:clip;white-space:nowrap}
 
 /* === TOP LINE · replaces stacked secbar + authribbon + hologram === */
-.topline{background:linear-gradient(180deg,#3A2E20 0%,#2E2418 100%);color:#E3CC8A;border-bottom:0.5px solid rgba(201,168,76,0.25);padding:7px 20px;font-family:var(--font-m);font-size:10px;letter-spacing:0.22em;text-transform:uppercase}
+.topline{background:linear-gradient(180deg,#3A2E20 0%,#2E2418 100%);color:#E3CC8A;border-bottom:0.5px solid rgba(201,168,76,0.25);padding:8px 20px;font-family:var(--font-m);font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase}
 .topline__inner{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
 .topline__dot{width:6px;height:6px;border-radius:50%;background:#5A7A2B;box-shadow:0 0 0 2px rgba(90,122,43,0.25);animation:secPulse 2.4s cubic-bezier(.4,0,.6,1) infinite}
 .topline__mark{color:#E3CC8A}
@@ -490,7 +490,7 @@ header.site ~ .hologram:first-of-type{display:none}
  <span class="mut">Session</span>
  <span class="acc" id="sessionId">K000-0000</span>
  <span class="mut">·</span>
- <span>Doc · CTRL-V3.1.2</span>
+ <span>Doc · CTRL-V3.1.3</span>
  </div>
 </div>
 
@@ -537,7 +537,7 @@ header.site ~ .hologram:first-of-type{display:none}
 </header>
 
 <!-- === BREADCRUMB === -->
-<div class="breadcrumb" id="breadcrumb"><div class="inner"><div id="crumb"><a href="/">Home</a></div><div id="crumbRef"><span class="ref">— V 3.1.2</span> · 2026-04-19</div></div></div>
+<div class="breadcrumb" id="breadcrumb"><div class="inner"><div id="crumb"><a href="/">Home</a></div><div id="crumbRef"><span class="ref">— V 3.1.3</span> · 2026-04-19</div></div></div>
 
 <!-- === MAIN === -->
 <main id="main">
@@ -555,7 +555,7 @@ header.site ~ .hologram:first-of-type{display:none}
  <h1 id="mandate" class="hero__mandate" data-i18n-html="hero.mandate">An Embassy Where the <em>Church</em><br>and the <em>State</em> Meet.</h1>
  <p class="hero__sub" data-i18n="hero.sub">The Kingdom of God — Holy Church of Jesus Christ maintains diplomatic representation under the framework of the Vienna Convention. Our two seats at Vienna and New York welcome pilgrims, students, diplomats, and partner institutions alike.</p>
  <div class="hero__seats"><span class="dot"></span><span data-i18n="hero.seats">Two Seats</span><span class="amp">·</span><span class="city">Vienna</span><span class="amp">&amp;</span><span class="city">New York</span><span class="amp">·</span><span>2026</span><span class="dot"></span></div>
- <div class="hero__meta"><span>Document of State</span><span class="sep">·</span><span>19 April 2026</span><span class="sep">·</span><span>v3.1.2</span></div>
+ <div class="hero__meta"><span>Document of State</span><span class="sep">·</span><span>19 April 2026</span><span class="sep">·</span><span>v3.1.3</span></div>
  <svg class="guilloche" viewBox="0 0 400 14" style="max-width:420px;margin:48px auto 0" aria-hidden="true"><path d="M0 7 C 20 0, 40 14, 60 7 S 100 14, 120 7 S 160 14, 180 7 S 220 14, 240 7 S 280 14, 300 7 S 340 14, 360 7 S 400 7, 400 7" fill="none" stroke="currentColor" stroke-width="0.7"/><path d="M0 7 C 20 14, 40 0, 60 7 S 100 0, 120 7 S 160 0, 180 7 S 220 0, 240 7 S 280 0, 300 7 S 340 0, 360 7 S 400 7, 400 7" fill="none" stroke="currentColor" stroke-width="0.7"/></svg>
  </div>
 
@@ -1312,8 +1312,8 @@ header.site ~ .hologram:first-of-type{display:none}
  <div class="footer__col"><h4>— Institutional</h4><ul><li><a href="/seats">Seats &amp; Missions</a></li><li><a href="/press">Press &amp; Communiqués</a></li><li><a href="/visa">Visa &amp; Travel Documents</a></li><li><a href="/calendar">Calendar</a></li><li><a href="/advisories">Advisories</a></li><li><a href="/chancery">Chancery</a></li><li><a href="/legal-treaty">Legal · Standing</a></li><li><a href="/legal-privacy">Privacy</a></li><li><a href="/legal-imprint">Imprint</a></li></ul></div>
  </div>
  <div class="footer__bottom">
- <div>KGD-HCJC <span class="dot">·</span> v3.1.2 <span class="dot">·</span> <span data-i18n="footer.revised">Last revised</span> 2026-04-19 <span class="dot">·</span> Vienna &amp; New York</div>
- <div class="footer__doc-control">— Doc-Control CTRL-V3.1.2 · Ref STD-SEC-2026-0419 · kgd-embassy.org/verify</div>
+ <div>KGD-HCJC <span class="dot">·</span> v3.1.3 <span class="dot">·</span> <span data-i18n="footer.revised">Last revised</span> 2026-04-19 <span class="dot">·</span> Vienna &amp; New York</div>
+ <div class="footer__doc-control">— Doc-Control CTRL-V3.1.3 · Ref STD-SEC-2026-0419 · kgd-embassy.org/verify</div>
  <div class="footer__tagline">— <b>Kingdom of God — Holy Church of Jesus Christ Org. International</b> · The Bridge between States and Church · Embassy · Vienna &amp; New York</div>
  <div class="microline">KGD-EMBASSY.ORG · OFFICIAL · VERIFIED · KGD-EMBASSY.ORG · OFFICIAL · VERIFIED · KGD-EMBASSY.ORG · OFFICIAL · VERIFIED · KGD-EMBASSY.ORG · OFFICIAL · VERIFIED · KGD-EMBASSY.ORG · OFFICIAL · VERIFIED · KGD-EMBASSY.ORG · OFFICIAL · VERIFIED</div>
  </div>
