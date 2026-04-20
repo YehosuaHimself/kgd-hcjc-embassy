@@ -11,7 +11,7 @@
 
   // ============ ROUTING ============
   const ROUTES = {
-    'home':{title:'KGD-HCJC · Embassy',crumb:[{l:'Home',h:'#home'}],ref:'— V 3.0.7 · 2026-04-19',parent:null},
+    'home':{title:'KGD-HCJC · Embassy',crumb:[{l:'Home',h:'#home'}],ref:'— V 3.0.9 · 2026-04-19',parent:null},
     'about':{title:'About · KGD-HCJC',crumb:[{l:'Home',h:'#home'},{l:'About',cur:true}],ref:'— SIX DEFINING PAGES',parent:'about'},
     'about-mandate':{title:'Mandate · About',crumb:[{l:'Home',h:'#home'},{l:'About',h:'#about'},{l:'Mandate',cur:true}],ref:'— 01 of 06',parent:'about'},
     'about-doctrine':{title:'Doctrine · About',crumb:[{l:'Home',h:'#home'},{l:'About',h:'#about'},{l:'Doctrine',cur:true}],ref:'— 02 of 06',parent:'about'},
@@ -46,14 +46,20 @@
     '404':{title:'Document not found',crumb:[{l:'Home',h:'#home'},{l:'404',cur:true}],ref:'— NOT FOUND',parent:null}
   };
 
+  function currentRouteKey() {
+    var p = location.pathname || '/';
+    p = p.replace(/^\/+/, '').replace(/\/+$/, '');
+    if (!p || p === 'index.html' || p === '404.html') return 'home';
+    return p;
+  }
+
   function route() {
-    var hash = (location.hash || '#home').slice(1);
-    var r = ROUTES[hash];
-    if (!r) { hash = '404'; r = ROUTES['404']; }
-    // toggle sections
+    var key = currentRouteKey();
+    var r = ROUTES[key];
+    if (!r) { key = '404'; r = ROUTES['404']; }
     var found = false;
     document.querySelectorAll('[data-page]').forEach(function (el) {
-      var on = el.dataset.page === hash;
+      var on = el.dataset.page === key;
       el.classList.toggle('active', on);
       if (on) found = true;
     });
@@ -61,29 +67,63 @@
       var fallback = document.querySelector('[data-page="404"]');
       if (fallback) fallback.classList.add('active');
     }
-    // update document title
     document.title = r.title + ' · Kingdom of God — Holy Church of Jesus Christ';
-    // update breadcrumb
     var crumb = document.getElementById('crumb');
     var crumbRef = document.getElementById('crumbRef');
     if (crumb) {
       crumb.innerHTML = r.crumb.map(function (c, i) {
         var sep = i > 0 ? '<span class="sep">/</span>' : '';
         if (c.cur) return sep + '<span class="cur">' + c.l + '</span>';
-        if (c.h) return sep + '<a href="' + c.h + '">' + c.l + '</a>';
+        if (c.h) {
+          var h = c.h.replace(/^#/, '/').replace(/^\/home$/, '/');
+          return sep + '<a href="' + h + '" data-route-link>' + c.l + '</a>';
+        }
         return sep + '<span>' + c.l + '</span>';
       }).join('');
     }
     if (crumbRef) crumbRef.innerHTML = '<span class="ref">' + r.ref + '</span>';
-    // active state in top nav
     document.querySelectorAll('nav.primary a').forEach(function (a) {
       var rt = a.getAttribute('data-route');
       a.classList.toggle('on', r.parent === rt);
     });
-    // scroll to top
     window.scrollTo({top: 0, behavior: 'instant'});
   }
-  window.addEventListener('hashchange', route);
+
+  function navigate(path, push) {
+    var url = (path === 'home' || !path) ? '/' : '/' + path;
+    if (push) {
+      try { history.pushState({route: path}, '', url); }
+      catch (e) { location.hash = path; }
+    }
+    route();
+  }
+
+  // Intercept clicks on internal links
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a');
+    if (!a) return;
+    if (e.defaultPrevented) return;
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var href = a.getAttribute('href');
+    if (!href) return;
+    if (a.target && a.target !== '' && a.target !== '_self') return;
+    if (/^(https?:|mailto:|tel:|javascript:)/i.test(href)) return;
+    // accept absolute-internal paths or hash-prefixed legacy paths
+    var path;
+    if (href.charAt(0) === '#') {
+      path = href.slice(1);
+    } else if (href.charAt(0) === '/') {
+      path = href.slice(1);
+    } else {
+      return;
+    }
+    path = path.replace(/^\/+/, '').replace(/\/+$/, '');
+    if (path === '' || path === 'index.html' || path === '404.html') path = 'home';
+    e.preventDefault();
+    navigate(path, true);
+  });
+
+  window.addEventListener('popstate', route);
   window.addEventListener('DOMContentLoaded', route);
   if (document.readyState !== 'loading') route();
 
