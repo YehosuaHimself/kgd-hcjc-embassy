@@ -429,21 +429,29 @@ header.site{top:26px}
 .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border:0.5px solid var(--amber-hair);border-radius:2px}
 .badge .chk{color:var(--success);font-weight:700}
 
-/* === FOOTER · refined warm umber · legible cream + amber accents === */
-footer.site{background:linear-gradient(180deg,#3D2A17 0%,#2A1B0E 100%);color:#F3E7CC;border-top:3px double #B89338;margin-top:60px}
-footer.site::before{opacity:0.05}
-footer.site .footer__top{padding-bottom:40px;border-bottom:0.5px solid rgba(227,204,138,0.22)}
-footer.site .footer__brand{gap:10px}
-footer.site .footer__brand .name{color:#FAF6EC;font-size:17px;letter-spacing:0.05em;line-height:1.35}
-footer.site .footer__brand .bridge{font-family:var(--font-m);font-size:11px;letter-spacing:0.24em;color:#E28B45;text-transform:uppercase;line-height:1.8;padding-top:10px;border-top:0.5px solid rgba(224,154,82,0.3);margin-top:6px}
-footer.site .footer__brand .sub{font-family:var(--font-m);font-size:11px;letter-spacing:0.22em;color:#D9B764;text-transform:uppercase}
-footer.site .footer__col h4{color:#E28B45;font-size:10.5px;letter-spacing:0.26em}
-footer.site .footer__col li a{color:#F3E7CC;font-size:14px;transition:color 160ms var(--ease)}
-footer.site .footer__col li a:hover{color:#FFFFFF}
-footer.site .footer__bottom{color:#D9B764;border-top:none;padding-top:26px;flex-direction:column;align-items:flex-start;gap:14px}
-footer.site .footer__bottom .dot{color:#E28B45}
+/* === FOOTER · upgraded · luminous metallic gold + cream hierarchy + ornaments === */
+footer.site{background:linear-gradient(180deg,#42301A 0%,#2A1B0E 70%,#1F140A 100%);color:#F5E8C9;border-top:none;margin-top:60px;position:relative}
+footer.site::before{opacity:0.04;mix-blend-mode:overlay}
+footer.site::after{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#8F6A1F 0%,#C9A96A 25%,#E5C870 50%,#C9A96A 75%,#8F6A1F 100%);box-shadow:0 1px 0 rgba(229,200,112,0.4),0 2px 8px rgba(0,0,0,0.4);pointer-events:none;z-index:1}
+footer.site .footer__top{padding:56px 0 48px;border-bottom:none;position:relative}
+footer.site .footer__top::after{content:"";position:absolute;left:24px;right:24px;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(229,200,112,0.35),transparent)}
+footer.site .footer__brand{gap:12px;position:relative}
+footer.site .footer__brand .sigil-wrap{filter:drop-shadow(0 1px 2px rgba(0,0,0,0.4))}
+footer.site .footer__brand .name{color:#FFFFFF;font-size:18px;letter-spacing:0.06em;line-height:1.4;font-weight:900;text-shadow:0 1px 2px rgba(0,0,0,0.35)}
+footer.site .footer__brand .bridge{font-family:var(--font-m);font-size:11.5px;letter-spacing:0.32em;text-transform:uppercase;line-height:1.7;padding:14px 0 10px;margin-top:8px;border-top:0.5px solid rgba(229,200,112,0.28);border-bottom:0.5px solid rgba(229,200,112,0.18);background:linear-gradient(135deg,#D9B764 0%,#E5C870 30%,#F2DA8E 50%,#C9A96A 75%,#9C7E2E 100%);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700}
+footer.site .footer__brand .sub{font-family:var(--font-m);font-size:11px;letter-spacing:0.24em;color:#D9B764;text-transform:uppercase;padding-top:8px}
+footer.site .footer__col{position:relative}
+footer.site .footer__col h4{color:#F5E8C9;font-size:11px;letter-spacing:0.3em;font-weight:700;text-transform:uppercase;margin-bottom:18px;padding-bottom:12px;border-bottom:0.5px solid rgba(229,200,112,0.25);position:relative}
+footer.site .footer__col h4::after{content:"";position:absolute;left:0;bottom:-1px;width:32px;height:1px;background:linear-gradient(90deg,#E5C870,#C9A96A);box-shadow:0 0 4px rgba(229,200,112,0.4)}
+footer.site .footer__col li a{color:#EFE3C7;font-size:14.5px;transition:color 200ms var(--ease),padding-left 200ms var(--ease);position:relative;display:inline-block;padding:1px 0}
+footer.site .footer__col li a::before{content:"·";color:#8F6A1F;position:absolute;left:-12px;opacity:0;transition:opacity 200ms var(--ease)}
+footer.site .footer__col li a:hover{color:#FFFFFF;padding-left:14px}
+footer.site .footer__col li a:hover::before{opacity:1;left:0}
+footer.site .footer__bottom{color:#D9B764;border-top:none;padding-top:32px;flex-direction:column;align-items:flex-start;gap:14px}
+footer.site .footer__bottom > span{color:#F5E8C9;font-size:10.5px;letter-spacing:0.22em}
+footer.site .footer__bottom .dot{color:#E5C870}
 .footer__tagline{display:none}
-.footer__doc-control{font-family:var(--font-m);font-size:9.5px;letter-spacing:0.22em;color:#B89338;text-transform:uppercase;opacity:0.85}
+.footer__doc-control{font-family:var(--font-m);font-size:9.5px;letter-spacing:0.24em;color:#9C7E2E;text-transform:uppercase;opacity:0.85;padding:10px 0 6px;border-top:0.5px solid rgba(143,106,31,0.3);border-bottom:0.5px solid rgba(143,106,31,0.3);width:100%}
 
 /* === NEW WAX SEAL · watercolor style === */
 .wax-new{width:96px;height:96px;border-radius:50%;position:relative;transform:rotate(-8deg);box-shadow:inset 0 -4px 10px rgba(60,20,10,0.35),0 3px 8px rgba(26,18,10,0.25);background:radial-gradient(circle at 32% 28%,#F4D55D 0%,#E89438 28%,#C04026 62%,#7A1E14 100%);overflow:hidden;display:flex;align-items:center;justify-content:center}
@@ -490,7 +498,7 @@ header.site ~ .hologram:first-of-type{display:none}
  <span class="mut">Session</span>
  <span class="acc" id="sessionId">K000-0000</span>
  <span class="mut">·</span>
- <span>Doc · CTRL-V3.1.4</span>
+ <span>Doc · CTRL-V3.1.5</span>
  </div>
 </div>
 
@@ -537,7 +545,7 @@ header.site ~ .hologram:first-of-type{display:none}
 </header>
 
 <!-- === BREADCRUMB === -->
-<div class="breadcrumb" id="breadcrumb"><div class="inner"><div id="crumb"><a href="/">Home</a></div><div id="crumbRef"><span class="ref">— V 3.1.4</span> · 2026-04-19</div></div></div>
+<div class="breadcrumb" id="breadcrumb"><div class="inner"><div id="crumb"><a href="/">Home</a></div><div id="crumbRef"><span class="ref">— V 3.1.5</span> · 2026-04-19</div></div></div>
 
 <!-- === MAIN === -->
 <main id="main">
@@ -555,7 +563,7 @@ header.site ~ .hologram:first-of-type{display:none}
  <h1 id="mandate" class="hero__mandate" data-i18n-html="hero.mandate">An Embassy Where the <em>Church</em><br>and the <em>State</em> Meet.</h1>
  <p class="hero__sub" data-i18n="hero.sub">The Kingdom of God — Holy Church of Jesus Christ maintains diplomatic representation under the framework of the Vienna Convention. Our two seats at Vienna and New York welcome pilgrims, students, diplomats, and partner institutions alike.</p>
  <div class="hero__seats"><span class="dot"></span><span data-i18n="hero.seats">Two Seats</span><span class="amp">·</span><span class="city">Vienna</span><span class="amp">&amp;</span><span class="city">New York</span><span class="amp">·</span><span>2026</span><span class="dot"></span></div>
- <div class="hero__meta"><span>Document of State</span><span class="sep">·</span><span>19 April 2026</span><span class="sep">·</span><span>v3.1.4</span></div>
+ <div class="hero__meta"><span>Document of State</span><span class="sep">·</span><span>19 April 2026</span><span class="sep">·</span><span>v3.1.5</span></div>
  <svg class="guilloche" viewBox="0 0 400 14" style="max-width:420px;margin:48px auto 0" aria-hidden="true"><path d="M0 7 C 20 0, 40 14, 60 7 S 100 14, 120 7 S 160 14, 180 7 S 220 14, 240 7 S 280 14, 300 7 S 340 14, 360 7 S 400 7, 400 7" fill="none" stroke="currentColor" stroke-width="0.7"/><path d="M0 7 C 20 14, 40 0, 60 7 S 100 0, 120 7 S 160 0, 180 7 S 220 0, 240 7 S 280 0, 300 7 S 340 0, 360 7 S 400 7, 400 7" fill="none" stroke="currentColor" stroke-width="0.7"/></svg>
  </div>
 
@@ -1312,8 +1320,8 @@ header.site ~ .hologram:first-of-type{display:none}
  <div class="footer__col"><h4>— Institutional</h4><ul><li><a href="/seats">Seats &amp; Missions</a></li><li><a href="/press">Press &amp; Communiqués</a></li><li><a href="/visa">Visa &amp; Travel Documents</a></li><li><a href="/calendar">Calendar</a></li><li><a href="/advisories">Advisories</a></li><li><a href="/chancery">Chancery</a></li><li><a href="/legal-treaty">Legal · Standing</a></li><li><a href="/legal-privacy">Privacy</a></li><li><a href="/legal-imprint">Imprint</a></li></ul></div>
  </div>
  <div class="footer__bottom">
- <div>KGD-HCJC <span class="dot">·</span> v3.1.4 <span class="dot">·</span> <span data-i18n="footer.revised">Last revised</span> 2026-04-19 <span class="dot">·</span> Vienna &amp; New York</div>
- <div class="footer__doc-control">— Doc-Control CTRL-V3.1.4 · Ref STD-SEC-2026-0419 · kgd-embassy.org/verify</div>
+ <div>KGD-HCJC <span class="dot">·</span> v3.1.5 <span class="dot">·</span> <span data-i18n="footer.revised">Last revised</span> 2026-04-19 <span class="dot">·</span> Vienna &amp; New York</div>
+ <div class="footer__doc-control">— Doc-Control CTRL-V3.1.5 · Ref STD-SEC-2026-0419 · kgd-embassy.org/verify</div>
  <div class="footer__tagline">— <b>Kingdom of God — Holy Church of Jesus Christ Org. International</b> · The Bridge between States and Church · Embassy · Vienna &amp; New York</div>
  <div class="microline">KGD-EMBASSY.ORG · OFFICIAL · VERIFIED · KGD-EMBASSY.ORG · OFFICIAL · VERIFIED · KGD-EMBASSY.ORG · OFFICIAL · VERIFIED · KGD-EMBASSY.ORG · OFFICIAL · VERIFIED · KGD-EMBASSY.ORG · OFFICIAL · VERIFIED · KGD-EMBASSY.ORG · OFFICIAL · VERIFIED</div>
  </div>
